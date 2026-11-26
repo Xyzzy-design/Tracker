@@ -1,4 +1,4 @@
-const CACHE='exercise-journal-shell-v1.8.1';
+const CACHE='exercise-journal-shell-v1.9';
 const ROOT=new URL('./',self.location.href);
 const SHELL=['index.html','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'].map(x=>new URL(x,ROOT).href);
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL))));
