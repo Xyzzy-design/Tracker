@@ -128,3 +128,11 @@ Keep this README current after every approved change. Record version, rationale,
 - Header palette icon opens the existing native theme selector. Cloud icon opens Cloud Sync; status is available in its accessible label, tooltip and Cloud page, with a colored indicator.
 - No changes to workout recording, data schema, migration, Firebase transactions, storage keys or exercise catalog. Service worker cache bumped to V1.9.4.
 - Validation: JavaScript syntax and package integrity checked; live browser, iPhone and Firebase tests pending. Verify all destinations, nested navigation, theme selection, cloud status, and mobile bottom clearance before release.
+
+
+## V1.9.5 — Workout Experience Edition
+- Compact training guidelines replace sets-logged progress bar; remove technical explanatory text.
+- Horizontal elapsed/remaining timer with a soft 60-minute target, start/pause/resume/finish and collapsible manual entry. Over-target time is shown without stopping the timer. Sticky header timer appears for running or paused selected workout; tap to return to timer.
+- Warm-up checklist uses existing `warm[].done` fields; `warmOther` is an optional boolean and `warmNote` retains existing free text. Legacy notes and detailed warm-up records remain intact. Unchecking Others hides but does not erase text. New sessions start unchecked.
+- No storage key, Firebase path or backup schema change. Existing autosave and timer persistence retained.
+- Validation: JavaScript syntax and package integrity; live browser, iPhone and Firebase behavior require deployment testing.
