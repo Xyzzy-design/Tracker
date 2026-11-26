@@ -136,3 +136,9 @@ Keep this README current after every approved change. Record version, rationale,
 - Warm-up checklist uses existing `warm[].done` fields; `warmOther` is an optional boolean and `warmNote` retains existing free text. Legacy notes and detailed warm-up records remain intact. Unchecking Others hides but does not erase text. New sessions start unchecked.
 - No storage key, Firebase path or backup schema change. Existing autosave and timer persistence retained.
 - Validation: JavaScript syntax and package integrity; live browser, iPhone and Firebase behavior require deployment testing.
+
+## V1.9.6 — Visual Consistency & Design System
+
+UI-only refinement of V1.9.5. CSS tokens: system font, body 15px, inputs 16px, section headings 18px, exercise headings 17px, metrics 28–32px, spacing 4/8/12/16/24px, card radius 14px, controls 8px. Existing three themes and five-tab navigation retained. Individual exercise cards, muted previous-performance panels, compact pool groups, plan day segments and expandable management controls, cardio activity tiles and optional details, strength/cardio progress switch, compact history and collapsible Best Practice topics. Existing selectors remain the source of truth for new proxy controls. Legacy CSS remains with a final token/component layer; do not remove old rules without regression tests. No intentional change to storage, migration, Firebase or workout calculations.
+
+Validation: inline JavaScript and service worker syntax checked; existing HTML IDs retained, no duplicates. Browser navigation blocked by environment policy; runtime, mobile widths, visual rendering, live Firebase and PWA upgrade not verified. Test all tabs, timer, warm-up, plan edits, cardio save, history and import before production. Full CSS consolidation and enhanced history date layout deferred.
